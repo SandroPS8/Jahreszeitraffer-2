@@ -91,7 +91,7 @@ else
   }
        
 // Speichert alle relevanten Werte 3 Sekunden nach abschalten der Kamera im EEPROM.  
-if(!digitalRead(CamPWRRead) && counter2 >= 8)
+if(digitalRead(CamPWRRead) && counter2 >= 9)
 { 
   delay(250);
   EEPROM.write(0, Frames); 
